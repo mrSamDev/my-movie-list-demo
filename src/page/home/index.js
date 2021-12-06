@@ -9,6 +9,8 @@ import MovieCard from "../../components/home/movieCard";
 const Home = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
 		dispatch(fetchMovieList());
 	}, [dispatch]);
 	const isLoading = useSelector(isMovieListLoading);

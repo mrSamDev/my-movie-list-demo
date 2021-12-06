@@ -11,14 +11,16 @@ const MovieCard = ({ movie, index }) => {
 						e.target.src = imageUrl("placeholder_for_missing_posters.png");
 					}}
 					alt={imageUrl(movie["poster-image"])}
-					className=" object-center object-cover lg:w-full lg:h-full"
+					className="w-full h-full object-center object-cover lg:w-full lg:h-full"
 					width="100"
 					height="100"
 				/>
 			</div>
 			<div className="flex justify-between truncate">
 				<div>
-					<p className="text-sm text-gray-500 mt-0.5">{movie.name}</p>
+					<p className="text-sm text-gray-500 mt-0.5">
+						{index + 1} {movie.name}
+					</p>
 				</div>
 			</div>
 		</div>

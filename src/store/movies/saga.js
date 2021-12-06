@@ -9,6 +9,7 @@ const log = console.log;
 function* getMovieList() {
 	try {
 		if (yield select(getIsAllPageLoaded)) return;
+
 		const currentPageNumber = yield select(getPageNumber);
 		const newPageNumber = currentPageNumber + 1;
 		const { list, totalItems } = yield call(movieService.getMoveList, newPageNumber);
