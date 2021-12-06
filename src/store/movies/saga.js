@@ -32,5 +32,5 @@ function* onMovieSearch({ keyword }) {
 }
 
 export default function* rootSaga() {
-	yield all([takeLatest(types.GET_MOVIE_LIST_REQUEST, getMovieList), debounce(1000, types.GET_MOVIE_SEARCH_REQUEST, onMovieSearch)]);
+	yield all([takeLatest(types.GET_MOVIE_LIST_REQUEST, getMovieList), debounce(300, types.GET_MOVIE_SEARCH_REQUEST, onMovieSearch)]);
 }
