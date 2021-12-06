@@ -37,7 +37,7 @@ const Home = () => {
 
 	return (
 		<Fragment>
-			<div className="grid grid-cols-3 gap-y-2 gap-x-3 sm:grid-cols-3 overflow-auto p-2">
+			<div className="grid grid-cols-3 gap-x-3 sm:grid-cols-3 overflow-auto p-2">
 				{getDisplayList().map(function (movie, index) {
 					const isMovieTheLastItemInTheList = index === movieList.length - 1;
 					return (
