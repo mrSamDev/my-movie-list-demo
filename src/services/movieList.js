@@ -10,7 +10,9 @@ class MovieList {
 	getMoveList(pageNumber) {
 		try {
 			const jsonName = this.getMovieJsonName(pageNumber);
+
 			const { page: { "content-items": { content } = {}, "total-content-items": totalContentItems } = {} } = require(`./movieListJson/${jsonName}`);
+
 			return { list: content, totalItems: totalContentItems };
 		} catch (error) {
 			throw error;

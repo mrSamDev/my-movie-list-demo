@@ -14,6 +14,7 @@ export default function reducer(state = intialState, action) {
 	switch (action.type) {
 		case types.SET_MOVIE_LIST:
 			mergedList = [...state.list, ...action.list];
+
 			return {
 				...state,
 				fullList: mergedList,
